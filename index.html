@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardware Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+    <div class="navbar">
+
+        <a href="#top" id="home">Home</a>
+        <ul class="links">
+            <li class="nav-titles">
+                <a id="category" onclick="DropMenu()">
+                    <i class="fa-solid fa-angle-down rotate "> </i>
+                    Categories
+                </a>
+                <div class="drop-down" id="DropDownMenu">
+                    <ul>
+                        <li> <a href="#hardware" onclick="DropMenu()"> Hardware</a></li>
+                        <li> <a href="#mouses" onclick="DropMenu()"> Mouses</a></li>
+                        <li> <a href="#keyboards" onclick="DropMenu()"> Keyboards</a></li>
+                        <li> <a href="#headsets" onclick="DropMenu()"> Headsets</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-titles">
+                <a href="#offer">Offers</a>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <div class="content">
+
+        <button id="checkout-btn">checkout</button>
+
+        <div class="black-screen">
+            <div class="checkout-form">
+                <div class="form">
+                    <h2>checkout</h2>
+                    <label for="Fname">First name: </label>
+                    <input id="Fname" type="text" required maxlength="15">
+
+                    <label for="Lname">Last name: </label>
+                    <input id="Lname" type="text" required maxlength="15">
+
+                    <label for="email">Email: </label>
+                    <input id="email" type="email">
+
+                    <label for="num">Number: </label>
+                    <input id="num" type="text" required maxlength="15">
+
+                    <label for="adress">Full Adress:</label>
+                    <input id="adress" type="text" required maxlength="100">
+
+                    <input type="submit" id="submit">
+                </div>
+
+                <span id="close-checkout">x</span>
+
+            </div>
+        </div>
+        <div class="overlay">
+            <div class="thanku">
+                <h2>Your order has been received</h2>
+                <img src="imgs/verified.png">
+                <p>Thank you for your purchase!</p>
+                <button id="close">Close</button>
+            </div>
+        </div>
+
+        <div class="categories" id="top">
+            <ul class="products">
+                <li> <a href="#hardware"> <img src="imgs/hardware.png" alt=""> Hardware</a></li>
+                <li> <a href="#mouses"> <img src="imgs/mouse.png" alt=""> Mouse</a> </li>
+                <li> <a href="#keyboards"> <img src="imgs/keyboard.png" alt="">Keyboard</a> </li>
+                <li> <a href="#headsets"> <img src="imgs/headset.png" alt="">Headset</a> </li>
+            </ul>
+        </div>
+
+        <img id="ad" src="imgs/logi-new-brand-store_01-FP_2204191258.jpg" alt="">
+
+        <h1 id="offer">offer</h1>
+
+        <div class="offers">
+            <div class="offer-products-container">
+                <div class="offer_product">
+                    <div class="product_img">
+                        <img src="imgs/RAZER-VIPER-MINI-1-6.jpg" alt="">
+                    </div>
+                    <div class="description">
+                        <h2>Razer Viper Mini Gaming Mouse 8,500 DPI (Black)</h2>
+                        <h4><span>1200 EGP</span> 950 EGP </h4>
+                    </div>
+                    <button onclick="shownotification()" class="cart"> Add to cart </button>
+                </div>
+            </div>
+
+            <div class="offer-products-container">
+                <div class="offer_product">
+                    <div class="product_img">
+                        <img src="imgs/6124OpB-LRL._AC_SL1500_.jpg" alt="">
+                    </div>
+                    <div class="description">
+                        <h2>REDRAGON K617 Fizz RGB 60% Gaming Mechanical Keyboard Red Switches (White Grey)</h2>
+                        <h4><span>1400 EGP</span> 1100 EGP </h4>
+                    </div>
+                    <button onclick="shownotification()" class="cart"> Add to cart </button>
+                </div>
+            </div>
+
+            <div class="offer-products-container">
+                <div class="offer_product">
+
+                    <div class="product_img">
+                        <img src="imgs/headset.jpg" alt="">
+                    </div>
+                    <div class="description">
+                        <h2>Razer Blackshark V2 X Gaming Headset 7.1 Surround Sound (Black)</h2>
+                        <h4><span>2100 EGP</span> 1900 EGP </h4>
+                    </div>
+                    <button onclick="shownotification()" class="cart"> Add to cart </button>
+                </div>
+            </div>
+
+            <div class="offer-products-container">
+                <div class="offer_product">
+
+                    <div class="product_img">
+                        <img src="imgs/redragon headset.jpg" alt="">
+                    </div>
+                    <div class="description">
+                        <h2>Redragon H510 Zeus 2 Gaming Headset 7.1 Surround Sound (Black)</h2>
+                        <h4><span>1500 EGP</span> 1400 EGP </h4>
+                    </div>
+                    <button onclick="shownotification()" class="cart"> Add to cart </button>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <h1 id="all-products">all products</h1>
+
+        <!-- hardware -->
+        <h2 class="category" id="hardware">Hardware</h2>
+
+        <div class="all-products">
+            <div class="product-container">
+
+                <div class="product_img">
+                    <img src="imgs/hardware/i5.jpeg" alt="">
+                </div>
+                <div class="description">
+                    <h2>Intel Core i5-13400 Desktop Processor 10 cores 20MB Cache, up to 4.6 GHz</h2>
+                    <h4> 8500 EGP </h4>
+                </div>
+                <button onclick="shownotification()" class="cart"> Add to cart </button>
+            </div>
+
+            <div class="product-container">
+                <div class="product_img">
+                    <img src="imgs/hardware/i9.jpeg" alt="">
+                </div>
+                <div class="description">
+                    <h2>Intel Core i9-13900 Desktop Processor 24 cores 36MB Cache, up to 5.6 GHz</h2>
+                    <h4>21000 EGP </h4>
+                </div>
+                <button onclick="shownotification()" class="cart"> Add to cart </button>
+            </div>
+
+            <div class="product-container">
+                <div class="product_img">
+                    <img src="imgs/hardware/rogstrix.jpeg" alt="">
+                </div>
+                <div class="description">
+                    <h2>ASUS ROG Strix Z790-E Gaming WiFi 6E LGA 1700</h2>
+                    <h4> 24000 EGP </h4>
+                </div>
+                <button onclick="shownotification()" class="cart"> Add to cart </button>
+            </div>
+
+            <div class="product-container">
+                <div class="product_img">
+                    <img src="imgs/hardware/giga.jpeg" alt="">
+                </div>
+                <div class="description">
+                    <h2>GIGABYTE Z790 AORUS ELITE DDR4 LGA 1700</h2>
+                    <h4> 12000 EGP </h4>
+                </div>
+                <button onclick="shownotification()" class="cart"> Add to cart </button>
+            </div>
+
+            <div class="product-container">
+                <div class="product_img">
+                    <img src="imgs/hardware/corsair ram.jpeg" alt="">
+                </div>
+                <div class="description">
+                    <h2>CORSAIR VENGEANCE PRO SL 64GB RGB (2x32GB) DDR4</h2>
+                    <h4> 10000 EGP </h4>
+                </div>
+                <button onclick="shownotification()" class="cart"> Add to cart </button>
+            </div>
+
+            <div class="product-container">
+                <div class="product_img">
+                    <img src="imgs/hardware/xpg ram.jpeg" alt="">
+                </div>
+                <div class="description">
+                    <h2>XPG SPECTRIX D50 16GB (2x8GB) DDR4 3600MHz</h2>
+                    <h4> 5000 EGP </h4>
+                </div>
+                <button onclick="shownotification()" class="cart"> Add to cart </button>
+            </div>
+
+            <div class="product-container">
+                <div class="product_img">
+                    <img src="imgs/hardware/4070ti.jpeg" alt="">
+                </div>
+                <div class="description">
+                    <h2>ASUS ROG Strix RTX 4070 Ti OC Edition Gaming Graphics Card</h2>
+                    <h4> 42000 EGP </h4>
+                </div>
+                <button onclick="shownotification()" class="cart"> Add to cart </button>
+            </div>
+
+            <div class="product-container">
+                <div class="product_img">
+                    <img src="imgs/hardware/3050.jpeg" alt="">
+                </div>
+                <div class="description">
+                    <h2>ASUS Dual RTX 3050 8GB
+                    </h2>
+                    <h4> 10000 EGP </h4>
+                </div>
+                <button onclick="shownotification()" class="cart"> Add to cart </button>
+            </div>
+        </div>
+
+        <!-- mouses -------------------------------------------------------- -->
+
+        <h2 class="category" id="mouses">mouses</h2>
+        <div class="all-products">
+            <div class="product-container">
+                <div class="product_img">
+                    <img src="imgs/mouses/cxo1e2dx.png" alt="">
+                </div>
+                <div class="description">
+                    <h2>Glorious Model O Gaming Mouse 67 Grams (Matte Black)</h2>
+                    <h4> 1400 EGP </h4>
+                </div>
+                <button onclick="shownotification()" class="cart"> Add to cart </button>
+            </div>
+
+            <div class="product-container">
+                <div class="product_img">
+                    <img src="imgs/mouses/G502.jpg" alt="">
+                </div>
+                <div class="description">
+                    <h2>Logitech G502 Lightspeed Wireless Gaming Mouse Hero Sensor 25K</h2>
+                    <h4> 3500 EGP </h4>
+                </div>
+                <button onclick="shownotification()" class="cart"> Add to cart </button>
+            </div>
+
+            <div class="product-container">
+                <div class="product_img">
+                    <img src="imgs/mouses/basilisk v2.jpg" alt="">
+                </div>
+                <div class="description">
+                    <h2>Razer Basilisk V2 Gaming Mouse 20K DPI Optical Sensor</h2>
+                    <h4> 1600 EGP </h4>
+                </div>
+                <button onclick="shownotification()" class="cart"> Add to cart </button>
+            </div>
+
+            <div class="product-container">
+                <div class="product_img">
+                    <img src="imgs/mouses/deathAdder_v2_mini_mouse_grip.png" alt="">
+                </div>
+                <div class="description">
+                    <h2>RAZER DeathAdder V2 Mini Gaming Mouse With Grip Tape 8,500 DPI (Black)</h2>
+                    <h4> 1000 EGP </h4>
+                </div>
+                <button onclick="shownotification()" class="cart"> Add to cart </button>
+            </div>
+
+            <div class="product-container">
+                <div class="product_img">
+                    <img src="imgs/mouses/razer viper.jpg" alt="">
+                </div>
+                <div class="description">
+                    <h2>Razer Viper 8KHz Ultralight Gaming Mouse 20,000 DPI</h2>
+                    <h4> 2200 EGP </h4>
+                </div>
+                <button onclick="shownotification()" class="cart"> Add to cart </button>
+            </div>
+
+            <div class="product-container">
+                <div class="product_img">
+                    <img src="imgs/mouses/steelseries.jpg" alt="">
+                </div>
+                <div class="description">
+                    <h2>SteelSeries PRIME Mini Esports Gaming Mouse 18,000 CPI (Black)</h2>
+                    <h4> 1400 EGP </h4>
+                </div>
+                <button onclick="shownotification()" class="cart"> Add to cart </button>
+            </div>
+
+            <div class="product-container">
+                <div class="product_img">
+                    <img src="imgs/mouses/hyperx_pulsefire_haste_wireless_white_1_top_down_900x.png" alt="">
+                </div>
+                <div class="description">
+                    <h2>HyperX Pulsefire Haste Wireless Gaming Mouse (White)</h2>
+                    <h4>2200 EGP </h4>
+                </div>
+                <button onclick="shownotification()" class="cart"> Add to cart </button>
+            </div>
+            <div class="product-container">
+                <div class="product_img">
+                    <img src="imgs/mouses/base-sabre-rgb-pro-wireless-champion-Gallery-SABRE-RGB-PRO-WIRELESS-01.jpg"
+                        alt="">
+                </div>
+                <div class="description">
+                    <h2>CORSAIR SABRE RGB PRO WIRELESS CHAMPION SERIES Ultra Gaming Mouse 26,000 DPI</h2>
+                    <h4> 3000 EGP </h4>
+                </div>
+                <button onclick="shownotification()" class="cart"> Add to cart </button>
+            </div>
+
+        </div>
+
+        <!-- keyboard------------------------------------------ -->
+
+        <h2 class="category" id="keyboards">keyboards</h2>
+        <div class="all-products">
+            <div class="product-container">
+                <div class="product_img">
+                    <img src="imgs/keyboards/logitech g915.jpg" alt="">
+                </div>
+                <div class="description">
+                    <h2>Logitech G915 TKL LIGHTSPEED RGB Mechanical Gaming Keyboard</h2>
+                    <h4> 6000 EGP </h4>
+                </div>
+                <button onclick="shownotification()" class="cart"> Add to cart </button>
+            </div>
+
+            <div class="product-container">
+                <div class="product_img">
+                    <img src="imgs/keyboards/blackwidow v3.jpg" alt="">
+                </div>
+                <div class="description">
+                    <h2>Razer BlackWidow V3 Mini HyperSpeed Wireless Mechanical Gaming Keyboard</h2>
+                    <h4> 4500 EGP </h4>
+                </div>
+                <button onclick="shownotification()" class="cart"> Add to cart </button>
+            </div>
+
+            <div class="product-container">
+                <div class="product_img">
+                    <img src="imgs/keyboards/61CVbPATj7L._AC_SL1200_.jpg" alt="">
+                </div>
+                <div class="description">
+                    <h2>Microsoft Surface Bluetooth Keyboard</h2>
+                    <h4> 4500 EGP </h4>
+                </div>
+                <button onclick="shownotification()" class="cart"> Add to cart </button>
+            </div>
+
+            <div class="product-container">
+                <div class="product_img">
+                    <img src="imgs/keyboards/epomaker.jpg" alt="">
+                </div>
+                <div class="description">
+                    <h2>EPOMAKER Theory TH80 Gaming Mechanical Keyboard</h2>
+                    <h4> 4300 EGP </h4>
+                </div>
+                <button onclick="shownotification()" class="cart"> Add to cart </button>
+            </div>
+
+            <div class="product-container">
+                <div class="product_img">
+                    <img src="imgs/keyboards/duckyone.jpg" alt="">
+                </div>
+                <div class="description">
+                    <h2>Ducky One 3 Mini RGB Gaming Mechanical Keyboard</h2>
+                    <h4> 4200 EGP </h4>
+                </div>
+                <button onclick="shownotification()" class="cart"> Add to cart </button>
+            </div>
+
+            <div class="product-container">
+                <div class="product_img">
+                    <img src="imgs/keyboards/HyperX-Alloy-Elite-2-Mechanical-Keyboard-6.jpg" alt="">
+                </div>
+                <div class="description">
+                    <h2>HyperX Alloy Elite 2 Mechanical Gaming Keyboard </h2>
+                    <h4> 3500 EGP </h4>
+                </div>
+                <button onclick="shownotification()" class="cart"> Add to cart </button>
+            </div>
+
+            <div class="product-container">
+                <div class="product_img">
+                    <img src="imgs/keyboards/corsair k70.jpg" alt="">
+                </div>
+                <div class="description">
+                    <h2>Corsair K70 RGB TKL Mechanical Gaming Keyboard </h2>
+                    <h4>3300 EGP </h4>
+                </div>
+                <button onclick="shownotification()" class="cart"> Add to cart </button>
+            </div>
+
+            <div class="product-container">
+                <div class="product_img">
+                    <img src="imgs/keyboards/redragon.jpg" alt="">
+                </div>
+                <div class="description">
+                    <h2>REDRAGON K530 Draconic Pro RGB 60% Gaming Wireless Mechanical Keyboard</h2>
+                    <h4> 1800 EGP </h4>
+                </div>
+                <button onclick="shownotification()" class="cart"> Add to cart </button>
+            </div>
+
+        </div>
+
+        <!-- headset ------------------------------------------------ -->
+
+        <h2 class="category" id="headsets">headsets</h2>
+        <div class="all-products">
+            <div class="product-container">
+                <div class="product_img">
+                    <img src="imgs/headsets/sennheiser.jpg" alt="">
+                </div>
+                <div class="description">
+                    <h2>Sennheiser HD 599 Special Edition Open Back Headphone</h2>
+                    <h4> 5000 EGP </h4>
+                </div>
+                <button onclick="shownotification()" class="cart"> Add to cart </button>
+            </div>
+
+            <div class="product-container">
+                <div class="product_img">
+                    <img src="imgs/headsets/Razer Kraken V3 HyperSense Gaming Headset.jpg" alt="">
+                </div>
+                <div class="description">
+                    <h2>Razer Kraken V3 HyperSense Gaming Headset</h2>
+                    <h4> 4000EGP </h4>
+                </div>
+                <button onclick="shownotification()" class="cart"> Add to cart </button>
+            </div>
+
+            <div class="product-container">
+                <div class="product_img">
+                    <img src="imgs/headsets/HyperX Cloud II Gaming Headset.jpg" alt="">
+                </div>
+                <div class="description">
+                    <h2>HyperX Cloud II Gaming Headset</h2>
+                    <h4> 3500 EGP </h4>
+                </div>
+                <button onclick="shownotification()" class="cart"> Add to cart </button>
+            </div>
+
+            <div class="product-container">
+                <div class="product_img">
+                    <img src="imgs/headsets/Logitech G733 LIGHTSPEED Wireless Gaming Headset.jpg" alt="">
+                </div>
+                <div class="description">
+                    <h2>Logitech G733 LIGHTSPEED Wireless Gaming Headset</h2>
+                    <h4> 3500 EGP </h4>
+                </div>
+                <button onclick="shownotification()" class="cart"> Add to cart </button>
+            </div>
+
+            <div class="product-container">
+                <div class="product_img">
+                    <img src="imgs/headsets/ASTRO A10 Gen 2 Gaming Headset.jpg" alt="">
+                </div>
+                <div class="description">
+                    <h2>ASTRO A10 Gen 2 Gaming Headset</h2>
+                    <h4> 2200 EGP </h4>
+                </div>
+                <button onclick="shownotification()" class="cart"> Add to cart </button>
+            </div>
+
+            <div class="product-container">
+                <div class="product_img">
+                    <img src="imgs/headsets/SteelSeries Arctis 3 Gaming Headset.jpg" alt="">
+                </div>
+                <div class="description">
+                    <h2>SteelSeries Arctis 3 Gaming Headset </h2>
+                    <h4> 2000 EGP </h4>
+                </div>
+                <button onclick="shownotification()" class="cart"> Add to cart </button>
+            </div>
+
+            <div class="product-container">
+                <div class="product_img">
+                    <img src="imgs/headsets/Razer Blackshark V2 X Gaming Headset.jpg" alt="">
+                </div>
+                <div class="description">
+                    <h2>Razer Blackshark V2 X Gaming Headset</h2>
+                    <h4>1900 EGP </h4>
+                </div>
+                <button onclick="shownotification()" class="cart"> Add to cart </button>
+            </div>
+            <div class="product-container">
+                <div class="product_img">
+                    <img src="imgs/headsets/Logitech G335 Gaming Headset.jpg" alt="">
+                </div>
+                <div class="description">
+                    <h2>Logitech G335 Gaming Headset</h2>
+                    <h4> 1900 EGP </h4>
+                </div>
+                <button onclick="shownotification()" class="cart"> Add to cart </button>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="notification"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
